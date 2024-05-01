@@ -69,9 +69,43 @@
 
     <!-- ============ HEADER ============ -->
     <header>
-      <div class="top">
-        <i class="ri-menu-line"></i>
+      <div class="header__top">
+        <!---- Hamburger menu ----->
+        <div class="header__menu">
+          <i class="ri-menu-line header__icon" id="hamburger-icon"></i>
+        </div>
+        <!---- Search/color-theme ----->
+        <div class="header__search">
+
+          <div class="left">
+            <i class="ri-search-line header__icon"></i>
+            <input type="search">
+          </div>
+          <div class="right">
+            <i class="ri-notification-line header__icon"></i>
+            <i class="ri-contrast-2-line header__icon"></i>
+            <img src="assets/profile-1.jpg" class="profile__img" alt="Mr best cat inside a box">
+            <h4 class="profile__name">Mr. Cat</h4>
+          </div>
+        </div>
       </div>
+      <div class="header__bottom">
+        <!---- Profile Information ----->
+        <div class="header__profile-info">
+          <img src="assets/profile-1.jpg" class="profile__img profile__img--big" alt="Mr best cat inside a box">
+          <h3>
+            <small>Hi there,</small>
+            <span>Mr. Cat (@mrbestcat)</span>
+          </h3>
+        </div>
+        <!---- Buttons ----->
+        <div class="header__buttons">
+          <button class="header__btn">New</button>
+          <button class="header__btn">Upload</button>
+          <button class="header__btn">Share</button>
+        </div>
+      </div>
+      <div class="bottom"></div>
     </header>
 
     <!-- ============ MAIN ============ -->

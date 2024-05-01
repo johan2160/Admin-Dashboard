@@ -8,8 +8,9 @@
   --primary-lighter: rgb(78, 70, 125);
   --secondary: #ff5a5fff;
   --accent: #f5f5f5ff;
-  --text-color-light: #fff;
-  --text-color-dark: #000;
+  --bg-color: #e2e8f0;
+  --color-light: #fff;
+  --color-dark: #000;
   --icon-color-1: #000;
   --icon-color-2: #fff;
 
@@ -20,6 +21,9 @@
   --font-regular: 400;
   --font-medium: 500;
   --font-bold: 600;
+
+  /* ----- Border radius */
+  --brad-full: 50%;
 
 }
 
@@ -40,6 +44,7 @@
 
 body {
   font-family: var(--body-font);
+  background: var(--bg-color);
 }
 
 /*============ LAYOUT ============*/
@@ -49,7 +54,7 @@ body {
   width: 100vw;
   height: 100vh;
   grid-template-columns: 1fr;
-  grid-template-rows: repeat(3, 1fr);
+  grid-template-rows: auto 1fr;
 }
 
 aside {
@@ -60,25 +65,24 @@ aside {
   position: fixed;
   z-index: 1;
   background: var(--primary);
-  color: var(--text-color-light);
+  color: var(--color-light);
   padding: 1.25rem 1rem;
 }
 
 header {
-  border: 1px solid blue;
-  color: var(--text-color-dark);
+  color: var(--color-dark);
 }
 
 main {
   border: 1px solid green;
-  color: var(--text-color-dark);
+  color: var(--color-dark);
 }
 
 /*============ RESPONSIVE LAYOUT ============*/
 @media (min-width: 765px) {
   .container {
     grid-template-columns: 60px 1fr;
-    grid-template-rows: 98px 1fr;
+    grid-template-rows: auto 1fr;
     grid-template-areas: "aside header"
                          "aside main"
   }
@@ -168,6 +172,136 @@ aside .settings i {
   }
 }
 
+/*============ HEADER ============*/
+header {
+  background-color: var(--color-light);
+  padding: 16px;
+}
+
+/*------ Header top ------*/
+.header__top {
+  width: 100%;
+  display: flex;
+}
+
+.header__search {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 16px;
+}
+
+.header__search .left, 
+.header__search .right {
+  display: flex;
+  align-items: center; 
+  gap: 16px;  
+}
+
+
+.header__search .right > :first-child {
+  display: none;
+}
+
+.header__icon {
+  font-size: 24px;
+  cursor: pointer;
+  padding: 5px 12px;
+  transition: all 0.25s;
+}
+
+#hamburger-icon {
+  padding: 8px;
+  border-radius: 6px;
+}
+
+.header__icon:hover {
+  background: var(--bg-color);
+  border-radius: var(--brad-full);
+}
+
+
+.header__search input[type="search"] {
+  display: none;
+  background-color: var(--bg-color);
+  width: 45vw;
+  border: none;
+  padding: 8px 22px;
+  border-radius: 50px;
+  font-family: var(--body-font);
+}
+
+.header__search input[type="search"]:focus {
+  outline: var(--primary) 2px transparent;
+} 
+
+.profile__img {
+  width: 40px;
+  border-radius: var(--brad-full);
+  cursor: pointer;
+  transition: outline 0.250ms;
+}
+
+.profile__img:hover {
+  outline: 2px solid var(--secondary);
+}
+
+.profile__name {
+  font-weight: var(--font-bold);
+  display: none;
+}
+
+/*------ Header bottom ------*/
+.header__bottom {
+  margin-top: 21px;
+}
+.profile__img--big {
+  width: 55px;
+}
+
+.header__profile-info {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+
+.header__profile-info h3 {
+  font-size: 16px;
+  font-weight: var(--font-medium);
+}
+
+.header__profile-info small {
+  font-size: 14px;
+}
+
+.header__profile-info h3 small {
+  display: block;
+}
+
+.header__buttons {
+  margin-top: 21px;
+  display: flex;
+  gap: 10px;
+}
+
+.header__btn {
+  background-color: var(--primary);
+  color: var(--color-light);
+  font-weight: var(--font-medium);
+  border: none;
+  padding: 6px 24px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.25s;
+}
+
+.header__btn:hover {
+  background-color: var(--secondary);
+}
+
+
 /*============ MEDIA QUERIES ============*/
 @media (min-width: 765px) and (max-width: 1200px) {
   
@@ -194,8 +328,58 @@ aside .settings i {
 }
 
 @media (min-width: 765px) {
-  .top i {
+  /*----------- ASIDE -----------*/
+  
+  /*----------- HEADER -----------*/
+  header {
+    padding: 24px;
+  }
+
+  .header__menu {
     display: none;
+  }
+
+  .header__search {
+    justify-content: space-between;
+  }
+
+  .header__search .right > :first-child {
+    display: block;
+  }
+  
+  .header__search input[type="search"] {
+    display: block;
+  }
+
+  .header__bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .header__icon {
+    font-size: 24px;
+  }
+
+  .profile__img {
+    width: 48px;
+  }
+
+  .profile__img--big {
+    width: 73px;
+  }
+
+  .header__profile-info h3 {
+    font-size: 18px;
+  }
+
+
+  .header__buttons {
+    gap: 24px;
+  }
+
+  .header__search input[type="search"] {
+    font-size: 16px;
   }
 }
 
@@ -204,8 +388,19 @@ aside .settings i {
   aside {
     padding: inherit 0;
   }
-
+  
   aside .logo h1 {
     font-size: 32px;
+  }
+
+  /*----------- HEADER -----------*/
+  .profile__name {
+    font-weight: var(--font-bold);
+    display: inline;
+  }
+
+  .header__btn {
+    font-size: 14.5px;
+    padding: 6px 32px;
   }
 }
