@@ -5,15 +5,14 @@
 :root {
   /* ----- Colors ----- */
   --primary: #2e294eff;
-  --primary-lighter: rgb(78, 70, 125);
   --secondary: #ff5a5fff;
-  --accent: #f5f5f5ff;
   --bg-color: #e2e8f0;
   --color-light: #fff;
+  --color-txt: #000;
   --grey: #222222;
   --color-dark: #000;
-  --icon-color-1: #000;
-  --icon-color-2: #fff;
+  --color-txt-opp: #fff;
+  --icon-color: #000;
 
   /* ----- Font and Typography  ----- */
   --body-font: "Poppins", sans-serif;
@@ -27,8 +26,21 @@
   --brad-full: 50%;
   
   /* ----- Box Shadow */
-  --b-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  --b-shadow: rgba(149, 157, 165, 0.2) 0px 12px 22px;
+}
 
+/*============ DARK THEME VARIABLES ============*/
+
+.dark-theme-variables {
+  /* --primary: #6f5fd1; */
+  /* --secondary: rgb(207, 255, 225); */
+  --bg-color: #000;
+  --color-txt: #fff;
+  --color-light: #232323;
+  --grey: #dcdcdc;
+  --color-dark: #ffffff;
+  --color-txt-opp: #000000;
+  --icon-color: #000;
 }
 
 /*============ CSS RESET ============*/
@@ -53,7 +65,7 @@ body {
 
 ::selection {
   background-color: var(--secondary);
-  color: var(--color-light);
+  color: var(--color-txt-opp);
 }
 
 /*============ LAYOUT ============*/
@@ -74,7 +86,7 @@ aside {
   position: fixed;
   z-index: 1;
   background: var(--primary);
-  color: var(--color-light);
+  color: #fff;
   padding: 1.25rem 1rem;
 }
 
@@ -227,6 +239,7 @@ header {
   padding: 8px 22px;
   border-radius: 50px;
   font-family: var(--body-font);
+  color: var(--color-txt);
 }
 
 .header__search input[type="search"]:focus {
@@ -285,7 +298,7 @@ header {
 
 .header__btn {
   background-color: var(--primary);
-  color: var(--color-light);
+  color: #fff;
   font-weight: var(--font-medium);
   border: none;
   padding: 6px 24px;
@@ -296,6 +309,7 @@ header {
 
 .header__btn:hover {
   background-color: var(--secondary);
+  color: white;
 }
 
 /*============ MAIN ============*/
