@@ -80,7 +80,7 @@ body {
 
 aside {
   display: none;
-  width: 90vw;
+  width: 100vw;
   max-width: 400px;
   height: 100vh;
   position: fixed;
@@ -139,12 +139,30 @@ main {
 aside .logo {
   display: flex;
   align-items: center;
+  position: relative;
   gap: 1rem;
   font-size: calc(14px + 2vw);
 }
 
 aside .logo i {
   font-size: 42px;
+}
+
+aside #hide-menu {
+  position: absolute;
+  right: -2px;
+  border: 2px solid #fff;
+  font-size: 24px;
+  padding: 4px 10px;
+  cursor: pointer;
+}
+
+aside #hide-menu:hover {
+  color: #000;
+  background: #fff;
+  border: none;
+  border-radius: var(--brad-full);
+  transition: all 0.5s;
 }
 
 aside .navigation,
@@ -221,7 +239,8 @@ header {
   transition: all 0.25s;
 }
 
-#hamburger-icon {
+
+#display-menu {
   padding: 8px;
   border-radius: 6px;
 }
@@ -485,6 +504,9 @@ main h3 {
 
 @media (min-width: 765px) {
   /*----------- ASIDE -----------*/
+  #hide-menu {
+    display: none;
+  }
   
   /*----------- HEADER -----------*/
   header {
