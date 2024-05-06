@@ -95,6 +95,7 @@ header {
 }
 
 main {
+  max-width: 1500px;
   color: var(--color-dark);
 }
 
@@ -132,6 +133,11 @@ main {
   aside {
     width: 285px;
     align-items: start;
+  }
+
+  main {
+    justify-self: center;
+    align-self: center;
   }
 }
 
