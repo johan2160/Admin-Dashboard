@@ -88,6 +88,7 @@ aside {
   background: var(--primary);
   color: #fff;
   padding: 1.25rem 1rem;
+  overflow: scroll;
 }
 
 header {
