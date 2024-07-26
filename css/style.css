@@ -5,16 +5,16 @@
 :root {
   /* ----- Colors ----- */
   --primary: #2e294eff;
-  --secondary: #ff5a5fff;
+  --secondary: rgb(126, 136, 194);
   --bg-color: #e2e8f0;
   --color-light: #fff;
   --color-txt: #000;
   --grey: #222222;
   --color-dark: #000;
-  --color-txt-opp: #fff;
+  --selection-color: #fff;
   --icon-color: #000;
 
-  /* ----- Font and Typography  ----- */
+  /* ----- Font and Typography  --  --- */
   --body-font: "Poppins", sans-serif;
 
     /* ----- Font weight  ----- */
@@ -39,7 +39,6 @@
   --color-light: #232323;
   --grey: #dcdcdc;
   --color-dark: #ffffff;
-  --color-txt-opp: #000000;
   --icon-color: #000;
 }
 
@@ -65,7 +64,7 @@ body {
 
 ::selection {
   background-color: var(--secondary);
-  color: var(--color-txt-opp);
+  color: var(--selection-color);
 }
 
 /*============ LAYOUT ============*/
@@ -162,13 +161,13 @@ aside #hide-menu {
   font-size: 24px;
   padding: 4px 10px;
   cursor: pointer;
+  border-radius: var(--brad-full);
+  border: none;
 }
 
 aside #hide-menu:hover {
   color: #000;
   background: #fff;
-  border: none;
-  border-radius: var(--brad-full);
   transition: all 0.5s;
 }
 
@@ -244,6 +243,7 @@ header {
   cursor: pointer;
   padding: 5px 12px;
   transition: all 0.25s;
+  border-radius: var(--brad-full);
 }
 
 
@@ -254,7 +254,6 @@ header {
 
 .header__icon:hover {
   background: var(--bg-color);
-  border-radius: var(--brad-full);
 }
 
 .header__search input[type="search"] {
@@ -399,11 +398,11 @@ main h3 {
   cursor: pointer;
   padding: 3px 8px;
   transition: all 0.25s;
+  border-radius: var(--brad-full);
 }
 
 .projects__icon:hover {
   background: var(--bg-color);
-  border-radius: var(--brad-full);
 }
 
 /*------ Announcements & Trending sections ------*/
