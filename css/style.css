@@ -78,16 +78,17 @@ body {
 }
 
 aside {
-  display: none;
-  width: 100vw;
+  width: 100%;
   max-width: 400px;
   height: 100vh;
   position: fixed;
+  left: -100%;
   z-index: 1;
   background: var(--primary);
   color: #fff;
   padding: 1.25rem 1rem;
   overflow: auto;
+  transition: left 0.25s;
 }
 
 header {
@@ -114,6 +115,7 @@ main {
     flex-direction: column;
     align-items: center;
     grid-area: aside;
+    left: 0;
   }
 
   main {
