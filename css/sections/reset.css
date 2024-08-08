@@ -1,0 +1,23 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  line-height: 1.5;
+  text-decoration: none;
+  list-style: none;
+}
+
+body {
+  font-family: var(--body-font);
+  background: var(--bg-color);  
+}
+
+::selection {
+  background-color: var(--secondary);
+  color: var(--selection-color);
+}

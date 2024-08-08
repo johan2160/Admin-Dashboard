@@ -1,0 +1,137 @@
+main {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: repeat(2, auto);
+}
+
+main h3 {
+  padding: 16px 0px;
+  text-align: center;
+}
+
+/*------ Projects section ------*/
+
+.projects {
+  padding: 0px 16px;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+  place-items: center;
+}
+
+.card {
+  background-color: var(--color-light);
+  border-left: 6px solid var(--primary);
+  width: 100%;
+  max-width: 500px;
+  border-radius: 8px;
+  padding: 16px;
+  transition: all 0.25s;
+}
+
+.card:hover {
+  border-left-color: var(--secondary);
+}
+
+.card h4 {
+  font-size: 16px;
+  font-weight: var(--font-bold);
+  padding: 10px 0px;
+}
+
+.card p {
+  font-size: 14px;
+  padding-bottom: 10px;
+}
+
+.card .projects__icons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 2px;
+}
+
+.card .projects__icon {
+  font-size: 22px;
+  cursor: pointer;
+  padding: 3px 8px;
+  transition: all 0.25s;
+  border-radius: var(--brad-full);
+}
+
+.projects__icon:hover {
+  background: var(--bg-color);
+}
+
+/*------ Announcements & Trending sections ------*/
+.announ_tren {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.announcements {
+  max-width: 350px;
+  padding: 0px 16px;
+}
+
+.announcements__card {
+  background-color: var(--color-light);
+  padding: 15px 30px;
+  border-radius: 8px;
+}
+
+.announcements__card h5 {
+  font-size: 14px;
+  padding-bottom: 8px;
+}
+
+.announcements__card p {
+  font-size: 12px;
+  color: var(--grey);
+  margin-bottom: 8px;
+}
+
+.announcements__card hr {
+  color: var(--grey);
+  margin-bottom: 8px;
+}
+
+
+.trending__cards {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  max-width: 100%;
+  padding: 20px;
+  border-radius: 8px;
+  background-color: var(--color-light);
+}
+
+.trending__card {
+  display: grid;
+  max-width: 350px;
+  grid-template-columns: auto 1fr;
+  place-content: center;
+  gap: 1.5rem;
+}
+
+.trending__card img {
+  width: 48px;
+  border-radius: var(--brad-full);
+}
+
+.trending__user-info p {
+  font-size: 12px;
+}
+
+
+/* Box-shadow */
+.card:hover,
+.announcements__card:hover,
+.trending__cards:hover {
+  box-shadow: var(--b-shadow);
+  transition: all 0.25s;
+}

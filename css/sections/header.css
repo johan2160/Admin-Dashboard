@@ -1,0 +1,129 @@
+header {
+  background-color: var(--color-light);
+  padding: 16px;
+}
+
+/*------ Header top ------*/
+.header__top {
+  width: 100%;
+  display: flex;
+}
+
+.header__search {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 16px;
+}
+
+.header__search .left, 
+.header__search .right {
+  display: flex;
+  align-items: center; 
+  gap: 16px;  
+}
+
+
+.header__search .right > :first-child {
+  display: none;
+}
+
+.header__icon {
+  font-size: 24px;
+  cursor: pointer;
+  padding: 5px 12px;
+  transition: all 0.25s;
+  border-radius: var(--brad-full);
+}
+
+
+#display-menu {
+  padding: 8px;
+  border-radius: 6px;
+}
+
+.header__icon:hover {
+  background: var(--bg-color);
+}
+
+.header__search input[type="search"] {
+  display: none;
+  background-color: var(--bg-color);
+  width: 45vw;
+  border: none;
+  padding: 8px 22px;
+  border-radius: 50px;
+  font-family: var(--body-font);
+  color: var(--color-txt);
+}
+
+.header__search input[type="search"]:focus {
+  outline: var(--primary) 2px transparent;
+} 
+
+.profile__img {
+  width: 40px;
+  border-radius: var(--brad-full);
+  cursor: pointer;
+  transition: all 250ms;
+}
+
+.profile__img:hover {
+  scale: 1.1;
+}
+
+.profile__name {
+  font-weight: var(--font-bold);
+  display: none;
+}
+
+/*------ Header bottom ------*/
+.header__bottom {
+  margin-top: 21px;
+}
+.profile__img--big {
+  width: 55px;
+}
+
+.header__profile-info {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+
+.header__profile-info h3 {
+  font-size: 16px;
+  font-weight: var(--font-medium);
+}
+
+.header__profile-info small {
+  font-size: 14px;
+}
+
+.header__profile-info h3 small {
+  display: block;
+}
+
+.header__buttons {
+  margin-top: 21px;
+  display: flex;
+  gap: 10px;
+}
+
+.header__btn {
+  background-color: var(--primary);
+  color: #fff;
+  font-weight: var(--font-medium);
+  border: none;
+  padding: 6px 24px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.25s;
+}
+
+.header__btn:hover {
+  background-color: var(--secondary);
+  color: white;
+}

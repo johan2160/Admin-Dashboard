@@ -1,0 +1,63 @@
+aside .logo {
+  display: flex;
+  align-items: center;
+  position: relative;
+  gap: 1rem;
+  font-size: calc(14px + 2vw);
+}
+
+aside .logo i {
+  font-size: 42px;
+}
+
+aside #hide-menu {
+  position: absolute;
+  right: -2px;
+  border: 2px solid #fff;
+  font-size: 24px;
+  padding: 4px 10px;
+  cursor: pointer;
+  border-radius: var(--brad-full);
+  border: none;
+}
+
+aside #hide-menu:hover {
+  color: #000;
+  background: #fff;
+  transition: all 0.5s;
+}
+
+aside .navigation,
+aside .settings {
+  margin-top: 3rem;
+  padding-left: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+aside .navigation i,
+aside .settings i {
+  font-size: 22px;
+}
+
+.navigation .nav_icon-container,
+.settings .nav_icon-container {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  cursor: pointer;
+}
+
+
+.navigation .nav_icon-container:hover i,
+.settings .nav_icon-container:hover i {
+  transition: all 0.45s;
+  color: var(--secondary);
+}
+
+.navigation .nav_icon-container:hover p,
+.settings .nav_icon-container:hover p {
+  transition: all 0.45s;
+  color: var(--secondary);
+}

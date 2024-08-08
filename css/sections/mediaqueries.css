@@ -1,0 +1,142 @@
+@media (min-width: 765px) and (max-width: 1200px) {
+  
+  /*----------- ASIDE -----------*/
+  aside {
+    padding: inherit 0;
+  }
+
+  aside .logo h1 {
+    display: none;
+  }
+
+  aside .navigation,
+  aside .settings {
+    padding: 0px;
+  }
+
+  aside .navigation p,
+  aside .settings p {
+    display: none;
+  }
+  
+  .announ_tren {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: start;
+    gap: 2rem;
+    padding: 0px 16px;
+  }
+}
+
+@media (min-width: 765px) {
+  /*----------- ASIDE -----------*/
+  #hide-menu {
+    display: none;
+  }
+  
+  /*----------- HEADER -----------*/
+  header {
+    padding: 24px;
+  }
+  
+  .header__menu {
+    display: none;
+  }
+
+  .header__search {
+    justify-content: space-between;
+  }
+
+  .header__search .right > :first-child {
+    display: block;
+  }
+  
+  .header__search input[type="search"] {
+    display: block;
+  }
+
+  .header__bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .header__icon {
+    font-size: 24px;
+  }
+
+  .profile__img {
+    width: 48px;
+  }
+  
+  .profile__img--big {
+    width: 73px;
+  }
+
+  .header__profile-info h3 {
+    font-size: 18px;
+  }
+  
+  
+  .header__buttons {
+    gap: 24px;
+  }
+  
+  .header__search input[type="search"] {
+    font-size: 16px;
+  }
+  /*----------- MAIN -----------*/
+  main {
+    padding-bottom: 2rem;
+  }
+
+  main h3 {
+    text-align: left;
+  }
+
+  .cards {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .card {
+    max-width: 600px;
+  }
+
+  .announcements {
+    max-width: none;
+    padding: 0;
+  }
+  
+
+}
+
+@media (min-width: 1200px) {
+  /*----------- ASIDE -----------*/
+  aside {
+    padding: inherit 0;
+  }
+  
+  aside .logo h1 {
+    font-size: 32px;
+  }
+
+  /*----------- HEADER -----------*/
+  .profile__name {
+    font-weight: var(--font-bold);
+    display: inline;
+  }
+  
+  .header__btn {
+    font-size: 14.5px;
+    padding: 6px 32px;
+  }
+  /*----------- MAIN -----------*/
+  main {
+    display: grid;
+    grid-template-columns: 75% 25%;
+  }
+
+  .announ_tren {
+    padding-right: 16px;
+  }
+}
